@@ -6,13 +6,13 @@
 }
 
 body {
-    font-family: "Open Sans", "Lato", Arial, sans-serif;
-    background: #0d031d;
+   font-family: "Cinzel", "Open Sans", "Lato", Arial, sans-serif;
+   color: #fff;
+   background: #000 url(../img/tvd-background.jpg) center center / cover no-repeat;
 }
 
-.grid {
-    display: grid;
-    place-content: center;
+main {
+    backdrop-filter: blur(8px);
 }
 
 .flex {
@@ -21,96 +21,100 @@ body {
     align-items: center;
 }
 
-.gap-20 {
-    gap: 20px
+.column {
+    flex-direction: column;
 }
 
-.me {
-    width: 360px;
-    height: auto;
+.gap-10 {
+    gap: 10px;
 }
 
-.card-container {
+.gap-4 {
+    gap: 4px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.header {
+    width: 100%;
+
+    p {
+        font-size: 1.9rem;
+    }
+}
+
+section {
     height: 100dvh;
-    perspective: 1000px;
+    display: grid;
+    place-items: center;
 }
 
-.card, .card2 {
+h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.card {
     position: relative;
-    width: 200px;
-    height: 300px;
+    width: 120px;
+    height: 140px;
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: 5px;
     transform-style: preserve-3d;
     transition: transform 0.6s;
-    border-radius: 5px;
+    cursor: pointer;
 
     &:hover {
         transform: rotateY(180deg);
     }
-
-    .front, .back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-        backface-visibility: hidden;
-    }
-
-    .front {
-        background-color: rgb(255 255 255 / 8%);
-        border: 1px solid rgb(255 255 255 / 4%);
-        color: #fff;
-        transform: rotateY(0deg);
-        text-align: center;
-    }
-
-    .back {
-        color: #fff;
-        transform: rotateY(180deg);
-        text-align: center;
-    
-        img {
-            height: 180px;
-            width: 180px;
-        }
-    }
 }
 
-.card .back {
-    background-color: #5a056b;
-    
-    p {
-        margin-top: 8px;
-        font-size: 1.4rem;
-        line-height: 1.4;
-    }
-}
-
-.card2 .back {
-    background-color: #8e6a0a;
-    padding-inline: 10px;
-    position: relative;
-
-    p {
-        font-size: 1.8rem;
-        line-height: 1.4;
-    }
-}
-
-.circle-1, .circle-2 {
+.front, .back {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    width: 70px;
-    height: 8px;
-    background-color: #0d031d;
-    border-radius: 50px;
-    border: 2px solid #765907;
+    backface-visibility: hidden;
 }
 
-.circle-1 {
-    top: 32px;
-    left: 65px;
+.front {
+    background: #fff url(../img/card-back.jpg) center center / cover no-repeat;
+    color: #fff;
+    transform: rotateY(0deg);
+    border-radius: 5px;
 }
 
-.circle-2 {
-    bottom: 32px;
-    right: 65px;
+.back {
+    transform: rotateY(180deg);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.grid {
+    display: grid;
+    place-content: center;
+}
+
+button {
+    margin-top: 8px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgb(0 0 0 / 70%);
+    border: 1px solid rgb(255 255 255 / 15%);
+
+    &:hover {
+        background: linear-gradient(to bottom, #000, #8b0000);
+        transition: background 0.25s ease-in-out;
+        border: 1px solid #8b0000;
+    }
 }
