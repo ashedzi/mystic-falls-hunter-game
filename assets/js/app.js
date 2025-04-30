@@ -1,19 +1,34 @@
-'use strict';
+// 'use strict';
 
-import * as utils from utils.js;
+// // import * as utils from './utils.js';
 
-const elena = utils.select('./assets/img/elena.jpg');
-const stefan = utils.select('./assets/img/stefan.jpg');
-const damon = utils.select('./assets/img/damonn.jpg');
-const bonnie = utils.select('./assets/img/bonniee.jpg');
-const katherine = utils.select('./assets/img/katherine-pierce.jpg');
-const caroline = utils.select('./assets/img/carolinee.jpg');
-const klaus = utils.select('./assets/img/klauss.jpg');
-const tyler = utils.select('./assets/img/tyler.jpg');
+// // const cards = utils.selectAll('.card');
+// // const back = utils.select('.back');
 
-const images = [ elena, stefan, damon, bonnie, katherine, caroline, klaus, tyler];
+// const cards = document.querySelectorAll('.card');
+// // const back = document.querySelector('.back');
 
-const doubledCards = [...images, ...images];
-const sortedCards = doubledCards.sort(() => Math.random() - 0.5);
+// const images = [ 
+//     'elena.jpg', 
+//     'stefan.jpg', 
+//     'damon.jpg', 
+//     'bonnie.jpg', 
+//     'katherine.jpg', 
+//     'caroline.jpg', 
+//     'klaus.jpg', 
+//     'tyler.jpg'
+// ]; 
 
-const cardBack = utils.select('.back');
+// const cardDeck = [...images, ...images];
+// const shuffledCards = cardDeck.sort(() => Math.random() - 0.5);
+
+// cards.forEach((card, index) => {
+//     const back = card.querySelector('.back');
+//     back.style.backgroundImage = `url('./assets/img/${shuffledCards[index]}')`;
+// });
+
+// // cards.forEach((card, index) => {
+// //     back.style.backgroundImage = `url('./img/cards/${shuffledCards[index]}')`;
+
+// //     // card.classList.add('flipped');
+// // });
