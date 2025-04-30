@@ -26,9 +26,3 @@ cards.forEach((card, index) => {
     const back = card.querySelector('.back');
     back.style.backgroundImage = `url('./assets/img/${shuffledCards[index]}')`;
 });
-
-// cards.forEach((card, index) => {
-//     back.style.backgroundImage = `url('./img/cards/${shuffledCards[index]}')`;
-
-//     // card.classList.add('flipped');
-// });
