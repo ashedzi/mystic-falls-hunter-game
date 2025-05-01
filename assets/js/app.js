@@ -6,6 +6,9 @@
 // const back = utils.select('.back');
 
 const cards = document.querySelectorAll('.card');
+const dialog = document.querySelector('dialog');
+const startButton = document.querySelector('.start-game');
+const restartButton = document.querySelector('.restart-game');
 // const back = document.querySelector('.back');
 
 const images = [ 
@@ -29,5 +32,21 @@ cards.forEach((card, index) => {
 
 
 function startGame() {
-    
+
 }
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        dialog.showModal();
+    }, 1000);
+});
+
+
+
+listen('click', open, () => {
+    dialog.showModal();
+});
+
+listen('click', close, () => {
+    dialog.close();
+})

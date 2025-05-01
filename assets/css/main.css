@@ -130,7 +130,7 @@ button {
 dialog {
     width: 50%;
     height: 350px;
-    margin-inline: auto;
+    margin: auto;
     border-radius: 8px;
     background: #000 url(../img/tvd-cast.jpg)center center / cover no-repeat;
     color: #fff;
@@ -156,12 +156,17 @@ dialog::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0 0 0 / 70%); /* darken overlay */
-    backdrop-filter: blur(2px); /* blur effect */
+    background: rgba(0 0 0 / 70%);
+    backdrop-filter: blur(2px);
     z-index: 0;
 }
 
 dialog * {
     position: relative;
-    z-index: 1; /* ensures content stays above the blur/dark layer */
+    z-index: 1; 
 }
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(3px);   
+  }
