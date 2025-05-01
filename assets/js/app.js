@@ -32,8 +32,23 @@ cards.forEach((card, index) => {
 
 
 function startGame() {
+    cards.forEach(card => {
+        card.style.transform = 'rotateY(180deg)';
+    })
 
+    setTimeout(() => {
+        cards.forEach(card => {
+            card.style.transform = 'rotateY(0deg)';
+        })
+    }, 3000);
 }
+
+startButton.addEventListener('click', () => {
+    console.log('Start button clicked');
+    dialog.close();
+    startGame()
+})
+
 
 window.addEventListener('load', () => {
     setTimeout(() => {
@@ -41,12 +56,16 @@ window.addEventListener('load', () => {
     }, 1000);
 });
 
+function validateHits() {
+    let displayedWord = randomWords.textContent.trim();
+    let userInput = typedWord.value.trim();
 
-
-listen('click', open, () => {
-    dialog.showModal();
-});
-
-listen('click', close, () => {
-    dialog.close();
-})
+    if ((displayedWord.length === userInput.length) && (displayedWord === userInput)) {
+        correct.currentTime = 0;
+        correct.play();
+        randomWords.textContent = getNextWord();
+        clearInput();
+        count++;
+        numberOfHits.textContent = `Hits: ${count}`;
+    }
+}
