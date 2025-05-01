@@ -5,6 +5,10 @@
     margin-inline: auto;
 }
 
+:root {
+    --primary-color: #8b0000;
+}
+
 body {
    font-family: "Cinzel", "Open Sans", "Lato", Arial, sans-serif;
    color: #fff;
@@ -23,6 +27,10 @@ main {
 
 .column {
     flex-direction: column;
+}
+
+.gap-20 {
+    gap: 20px;
 }
 
 .gap-10 {
@@ -115,6 +123,45 @@ button {
     &:hover {
         background: linear-gradient(to bottom, #000, #8b0000);
         transition: background 0.25s ease-in-out;
-        border: 1px solid #8b0000;
+        border: 1px solid var(--primary-color);
     }
+}
+
+dialog {
+    width: 50%;
+    height: 350px;
+    margin-inline: auto;
+    border-radius: 8px;
+    background: #000 url(../img/tvd-cast.jpg)center center / cover no-repeat;
+    color: #fff;
+    border: 1px solid rgb(0 0 0 / 70%);
+    padding: 32px;
+    overflow: hidden;
+
+    h3, p {
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+}
+
+dialog::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0 0 0 / 70%); /* darken overlay */
+    backdrop-filter: blur(2px); /* blur effect */
+    z-index: 0;
+}
+
+dialog * {
+    position: relative;
+    z-index: 1; /* ensures content stays above the blur/dark layer */
 }

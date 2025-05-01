@@ -26,3 +26,8 @@ cards.forEach((card, index) => {
     const back = card.querySelector('.back');
     back.style.backgroundImage = `url('./assets/img/${shuffledCards[index]}')`;
 });
+
+
+function startGame() {
+    
+}
