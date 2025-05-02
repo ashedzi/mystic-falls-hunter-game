@@ -9,6 +9,8 @@ const cards = document.querySelectorAll('.card');
 const dialog = document.querySelector('dialog');
 const startButton = document.querySelector('.start-game');
 const restartButton = document.querySelector('.restart-game');
+const game = document.querySelector('section')
+const modal = document.querySelector('.modal');
 // const back = document.querySelector('.back');
 
 const images = [ 
@@ -44,16 +46,20 @@ function startGame() {
 }
 
 startButton.addEventListener('click', () => {
-    console.log('Start button clicked');
-    dialog.close();
+    // console.log('Start button clicked');
+    // dialog.close();
+    modal.style.display = 'none';
+    game.style.display = 'block'
+
     startGame()
 })
 
 
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        dialog.showModal();
-    }, 1000);
+    
+    // setTimeout(() => {
+    //     dialog.showModal();
+    // }, 1000);
 });
 
 function validateHits() {
