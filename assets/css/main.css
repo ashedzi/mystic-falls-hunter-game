@@ -154,3 +154,20 @@ button {
         font-size: 1.8rem;
     }
 }
+
+.timer {
+    width: 65px;
+
+    p {
+        width: 45px;
+    }
+
+    /* i {
+        width: 16px;
+        height: 16px;
+    } */
+}
+
+.moves {
+    width: 85px;
+}
