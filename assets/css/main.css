@@ -155,19 +155,79 @@ button {
     }
 }
 
+.gameover-modal {
+    width: 50%;
+    margin: auto;
+    border-radius: 8px;
+    background: rgb(0 0 0 / 80%);
+    color: #fff;
+    border: 1px solid rgb(0 0 0 / 60%);
+    padding: 32px;
+    display: none;
+    position: fixed;
+    inset: 0; /* shorthand for top, right, bottom, left = 0 */
+    display: none; /* or `flex` when showing */
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8); /* dark transparent overlay */
+    z-index: 9999; /* on top of all elements */
+
+    h3 {
+        font-size: 4rem;
+        color: #be0606;
+    }
+}
+
+dialog {
+    width: 30%;
+    margin: auto;
+    border-radius: 8px;
+    background: rgb(0 0 0 / 95%);
+    color: #fff;
+    border: 1px solid rgb(0 0 0 / 60%);
+    padding: 32px;
+
+    h3 {
+        font-size: 4rem;
+        text-align: center;
+        /* color: #be0606; */
+    }
+
+    p {
+        margin-top: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+dialog p :nth-child(2) {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.score-summary {
+    font-size: 1.8rem;
+}
+
 .timer {
     width: 65px;
 
     p {
         width: 45px;
     }
-
-    /* i {
-        width: 16px;
-        height: 16px;
-    } */
 }
 
 .moves {
-    width: 85px;
+    width: 100px;
 }
+
+.card.matched {
+    pointer-events: none;     
+    border: 1px solid #be0606;  
+}
+
+.card.matched .back {
+    opacity: 0.7;
+  }
